@@ -1,0 +1,47 @@
+<% include shared/header.ejs %>
+
+<main class="container">
+    <h2 class="text-left">Order Form</h2>
+    <button type="button" class="btn btn-outline-dark" style="margin: 20px 0 20px 0;">Sign Up</button>
+    <button type="button" class="btn btn-outline-dark" style="margin: 20px 0 20px 0;">Log In</button>
+    <h4>Order as a guest</h4>
+    <hr>
+    <h5>Shipping Address</h5>
+    <form>
+        <div class="form-group row">
+            <label for="inputname" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputTel" class="col-sm-2 col-form-label">Tel</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputTel" placeholder="000-0000-0000">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.ca">
+            </div>
+        </div>
+    </form>
+    <h5>Payment</h5>
+    
+    <form method="post" action="">
+        <h5><input type="radio" name="q1" value="bankTransfer"> Bank Transfer</h5>
+        <h5><input type="radio" name="q1" value="creditCard"> Credit Card</h5>
+        <h5><input type="radio" name="q1" value="paypal"> PayPal</h5>
+    </form>
+    <hr>
+    <a href="/paypal-top"><button type="button" class="btn btn-dark btn-lg">Confirm Order</button></a>
+</main>
+
+<% include shared/footer.ejs %>
